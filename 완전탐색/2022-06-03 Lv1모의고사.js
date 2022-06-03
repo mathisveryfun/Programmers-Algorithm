@@ -1,4 +1,7 @@
-//22:42 시작
+//22:42 시작 
+// 느낀점: 어렵지는 않은데 코드가 너무 더럽다.
+// 밑에 filter를 쓴 모범답안이 있는데 왜 내가 모듈로를 생각을 못했을까...
+
 function solution(answers) {
   // 1, 2, 3번 점수를 count로 놓는다.
   let firstScore = 0;
@@ -52,6 +55,25 @@ function solution(answers) {
     result.push(3)
   }
   return result;
+}
+
+function solution(answers) {
+    var answer = [];
+    var a1 = [1, 2, 3, 4, 5];
+    var a2 = [2, 1, 2, 3, 2, 4, 2, 5]
+    var a3 = [ 3, 3, 1, 1, 2, 2, 4, 4, 5, 5];
+
+    var a1c = answers.filter((a,i)=> a === a1[i%a1.length]).length;
+    var a2c = answers.filter((a,i)=> a === a2[i%a2.length]).length;
+    var a3c = answers.filter((a,i)=> a === a3[i%a3.length]).length;
+    var max = Math.max(a1c,a2c,a3c);
+
+    if (a1c === max) {answer.push(1)};
+    if (a2c === max) {answer.push(2)};
+    if (a3c === max) {answer.push(3)};
+
+
+    return answer;
 }
 
 console.log(solution([3, 3, 1, 1, 1, 1, 2, 3, 4, 5]))
