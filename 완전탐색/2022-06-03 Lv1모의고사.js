@@ -20,7 +20,7 @@ function solution(answers) {
     if (secondRandom[j] === answers[0]) {
       secondScore += 1;
     }
-    if (thirdRandom[i] === answers[0]) {
+    if (thirdRandom[k] === answers[0]) {
       thirdScore += 1;      
     }
     i += 1;
