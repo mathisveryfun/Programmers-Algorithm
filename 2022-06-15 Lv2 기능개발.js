@@ -1,4 +1,8 @@
-// 12:25분 시작 12:35분 휴식 12:45분 속개 13:11분 휴식 13:17 분 속개 13:20 첫 제출
+// 12:25분 시작 12:35분 휴식 12:45분 속개 13:11분 휴식 13:17 분 속개 13:20 첫 제출 13: 31 분 최종 제출
+
+// 걸린시간 : 50분 정도
+
+// 막힌 부분 : progress 배열만 줄어드는게 아니라 그에 매핑되는 speed 배열로 같이 줄어들어야한다.!
 
 function solution(progresses, speeds) {
   // 우선 언제까지 작업을 해야할까? progresses가 없어질때 까지
@@ -25,12 +29,14 @@ function solution(progresses, speeds) {
           count += 1;
           result.push(count);
           progresses.splice(0, count)
+          speeds.splice(0, count)
         } else if (progresses[i] >= 100) {
           count += 1;
         } else {
           // 그부분을 splice로 덜어낸후 count를 세어 result에 푸쉬한다.
           result.push(count)
           progresses.splice(0, count);
+          speeds.splice(0, count)
           break;
         }
       }
