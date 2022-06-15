@@ -1,3 +1,12 @@
+// 걸린시간 : 1시간 정도
+
+// 걸린이유 : 문제 자체를 이해하는데 어려웠고, 그에 따라 로직을 짜느넛 조차 시간이 많이 걸림.
+
+// 느낀점 : 객체를 너무 많이 이용하고 있다는 느낌이 듬.
+
+// 개선할 코드 : reportState와 mailMember을 한 가지 작동으로 통합할 수는 없을까?
+
+
 function solution(id_list, report, k) {
   // report 배열에서 중복을 없애기
   report = [...new Set(report)];
